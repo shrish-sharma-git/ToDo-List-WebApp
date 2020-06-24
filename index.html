@@ -10,8 +10,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
   <title>Welcome to the ToDo-List Website!</title>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
     <a class="navbar-brand" href="index.html">
@@ -31,19 +34,19 @@
     </div>
   </nav>
   <div class="container my-4">
-    <h2 class="text-center">ToDo-List</h2>
-      <div class="form-group">
-        <label for="title" class="input">Title</label>
-        <input type="text" class="form-control" id="title" aria-describedby="emailHelp" onfocus=this.value=''>
-        <small id="textHelp" class="form-text text-muted">Add an item to your personal ToDo-List.
-        </small>
-      </div>
-      <div class="form-group">
-        <label for="description" class="input">Description</label>
-        <textarea class="form-control" id="description" rows="3" onfocus=this.value=''></textarea>
-      </div>
-      <button type="submit" id="add" class="btn btn-outline-primary">Add to List</button>
-      <button  id="clear" class="btn btn-outline-danger" onclick="clearStorage()">Clear list</button>
+    <h1 class="text-center">ToDo-List</h1>
+    <div class="form-group">
+      <label for="title" class="input">Title</label>
+      <input type="text" class="form-control" id="title" aria-describedby="emailHelp" onfocus=this.value=''>
+      <small id="textHelp" class="form-text text-muted">Add an item to your personal ToDo-List.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="description" class="input">Description</label>
+      <textarea class="form-control" id="description" rows="3" onfocus=this.value=''></textarea>
+    </div>
+    <button type="submit" id="add" class="btn btn-outline-primary">Add to List</button>
+    <button id="clear" class="btn btn-outline-danger" onclick="clearStorage()">Clear list</button>
     <div id="items" class="my-4">
       <h2>Your Items</h2>
       <table class="table table-secondary">
@@ -52,7 +55,7 @@
             <th scope="col">S. No</th>
             <th scope="col">Title</th>
             <th scope="col">Description</th>
-            <th scope="col">Acrions</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody id="tableBody">
@@ -63,9 +66,17 @@
             <td><button class="btn btn-sm btn-primary">Delete</button></td>
           </tr>
         </tbody>
-      </table>  
+      </table>
     </div>
   </div>
+  <!-- Footer -->
+  <footer class="page-footer-dark font-small bg-info">
+    <div class="footer-copyright text-center py-3">© 2020 ToDo-List:
+      <a href="#"> ToDoList.com</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -78,6 +89,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="script.js"></script>  
+  <script src="script.js"></script>
 </body>
+
 </html>
